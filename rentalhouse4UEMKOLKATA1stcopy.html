@@ -1,0 +1,1119 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+BODY{
+	height: 100%;
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/50598/concrete-wall-background.jpg) center center fixed;
+	background-size: cover;
+	FONT-FAMILY: ARIAL,HELVETICA,SANS-SERIF;
+}
+
+/* HEADER RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR LOGO LOGO LOGO LOGOG LOGO LOGO LOGO */
+.HEADER{
+	PADDING: 60PX;
+	TEXT-ALIGN:CENTER;
+	BACKGROUND: #8258FA;
+	COLOR: WHITE;
+	FONT-SIZE: 30PX;
+}
+
+
+H1{
+	TEXT-SHADOW: 2PX 2PX 5PX RED ;
+}
+
+
+/* STAR RATING ONLY  STAR RATING ONLY STAR RATING ONLY STAR RATING ONLY STAR RATING ONLY STAR RATING ONLY **/
+.checked {
+  color: orange;
+}
+
+
+/* nav bar nav bar nav bar nav bar nav bar nav bar nav bar nav bar nav bar nav bar nav bar nav bar nav bar nav bar nav bar nav bar nav bar nav bar nav bar nav bar nav bar nav bar*/
+
+* {box-sizing: border-box}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%; /* Four links of equal widths */
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.navbar a.active {
+  background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* star rating star rating star rating star rating star rating star rating star rating star rating star rating star rating star rating star rating star rating star rating */
+
+.heading {
+  font-size: 25px;
+
+  padding-left: 30px;
+}
+
+.fa {
+  font-size: 25px;
+margin: 10px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:15px;
+padding-left: 100px;
+}
+
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+padding-right: 60px;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 4px;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+
+.str{
+       padding-left: 30px;
+}
+
+
+/* chat popup chat popup chat popup chat popup chat popup chat popup chat popup chat popup chat popup chat popup chat popup chat popup chat popup chat popup  chat popup chat popup*/
+
+
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+/** contact number contact number contact number contact number contact number contact number contact number contact number contact number **/
+.man{
+padding-left: 110px;
+padding-right: 110px;
+}
+
+.nam{
+padding-top:30px;
+padding-left: 470px;
+padding-right: 110px;
+}
+
+/** star rating number **/
+.si{
+	padding-left:1000px;
+}
+
+
+/** image gallery  image gallery  image gallery  image gallery  image gallery  image gallery  image gallery  image gallery  image gallery  image gallery **/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 10000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+
+/** facilities facilities facilities facilities facilities facilities facilities facilities facilities facilities facilities facilities facilities facilities facilities facilities facilities **/
+
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 105px;
+  font-size: 26px;
+  line-height: 110px;
+  border-radius: 53px;
+  background-color: #654EF9;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 100px;
+  width: 100px;
+  border-radius: 60%;
+}
+
+.mou{
+	padding-top: 60px;
+	padding-left: 60px;
+	padding-bottom: 10px;
+}
+.ab{
+	padding-top: 10px;
+	padding-left: 120px;
+	padding-bottom: 10px;
+}
+.cd{
+	padding-top: 10px;
+	padding-left: 260px;
+	padding-bottom: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/** quote auote qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq **/
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+
+.quot{
+	padding-top: 50px;
+}
+
+
+/* collapsibale collapsibale collapsibale collapsibale collapsibale collapsibale collapsibale collapsibale collapsibale collapsibale collapsibale collapsibale*/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/** button butoon nbbbnhbbbbbbbbbbbbbbbbbbb bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb bbbbbbbbbbbbbbbbbbbbbbbbbbb bbbbbbbbb**/
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Green */
+.success {
+  border-color: #04AA6D;
+  color: green;
+}
+
+.success:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* contact contact contact contactcontact contactcontact contactcontact contactcontact contactcontact contactcontact contactcontact contact */
+.hrf{
+	padding-top: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.noc{
+	text-align: center;
+	padding-top: 80px;  	
+}
+.label {
+   	color: white;
+  	padding: 8px;
+  	font-family: Arial;
+}
+
+.con{
+	padding-left: 100px;
+}
+/* social media social media  social media social media  social media social media  social media social media  social media social media  social media social media */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 65px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+.social{
+	padding-left: 1000px;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<DIV CLASS="HEADER">
+	<H1> ERRROR BROO !! </H1>
+	<P> ERRROR IS ERROR </P>
+</DIV>
+
+<div class="navbar">
+  <a class="active" href="#home">Home</a> 
+  <a href="#reviews">Reviews</a> 
+  <a href="#">Amenities</a> 
+  <a href="#">Photos</a>
+</div>
+
+<div id="home">
+<H1> <CENTER> MarioStay_Ankush Paying Guest House </CENTER></H1> 
+
+<div class="si"><font size="5"> 4.2 <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span> </div>
+
+
+
+<div class="man">
+
+<font face="arial"> Accomodation Starts with 4499/- per month with all facilities </font>
+<hr>
+</div>
+
+<div class="nam">
+
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn" class="btn success">Why MarioStay_Ankush paying guest house ??</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>
+	<ul>
+		<li> All type of Amenities Available as per the need of the Customer
+		<p>
+		<li> Safe and Secure Stay Guaranteed.
+		</p>
+		<p>
+		<li> Continuous Monitoring on the Maintenance of the Property
+		</p>
+		<p>
+		<li> Well Trained Staff with good behaviour
+	</ul>
+   </p>
+  </div>
+
+</div>
+</div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+</div>
+
+
+<div id="reviews">
+<br>
+
+<span class="heading">User Rating</span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<div class="str">
+<p> 4.1 average based on 254 reviews.</p>
+</div>
+<hr style="border:3px solid #f1f1f1">
+
+<div class="row">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="sideright">
+    <div>150</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="sideright">
+    <div>63</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="sideright">
+    <div>15</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="sideright">
+    <div>6</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="sideright">
+    <div>20</div>
+  </div>
+</div>
+<br>
+
+
+
+<hr>
+
+
+<div class="quot">
+<div class="slideshow-container">
+
+<div class="mySlides">
+  <q> I stayed at mario stay PG. And it was a very Good Experience. Specially the Location is Nice and Facilities are also good. Only The Food Quality is not Upto the mark. And Shankar Kaku is There who takes care of Everything in PG is Very Nice Person and very Helpful . Overall it was a nice experience.</q>
+  <p class="author">- Debraj Basak</p>
+</div>
+
+<div class="mySlides">
+  <q> Everything is same as shown and food is also good.</q>
+  <p class="author">- Sanket Raj</p>
+</div>
+
+<div class="mySlides">
+  <q>Its at a great location being close to Axis Mall and Novotel Hotel. Amenities provided are good. The owner is very helpful and responsive to requests.</q>
+  <p class="author">- Asutosh Patel</p>
+</div>
+<div class="mySlides">
+  <q> Lovely enviroment for outsiders. Never had this kind you experience in any were before.</q>
+  <p class="author">- Soma Roy</p>
+</div>
+<div class="mySlides">
+  <q> Nice PG facilities. Best location. PG owner(Sayantan bhaiya) is very helpful. Rooms are very nice and open. Ventilation is proper. Cleaning is done on daily basis. Food is also good. Nice  place to stay.</q>
+  <p class="author">- Anubhav Mathur</p>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+</div>
+
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</div>
+
+
+<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    MarioStay-Ankush paying guest house
+
+    <label for="msg"><p><b>Message</b></p></label>
+    <textarea placeholder="welcome to MarioStay...!!! We provide accomodation for boys, as well as for girls also. contact no: 7685972901 " name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+<div class="mou">
+<div class="chip">
+  <img src="https://sandreehome.com/wp-content/uploads/2021/11/icons8-retro-tv-100.png" alt="Person" width="96" height="96">
+   <font color="white">WiFi unlimited (100 Mbps) </font>
+</div>
++
+<div class="chip">
+  <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTAj-W-9CVNXRzTqO2xTPXmmfeFsJNJ_uzl8vv-TWr3IoqlLrN5eXNWJbkwIiVzV83VPxMPsWaK5brOndHUU-NQjXOPi27LxRRVvtROiqHd735b-2wkDtkvzQ&usqp=CAs" alt="Person" width="96" height="96">
+  <font color="white"> Tata sky and Led TV </font>
+</div>
++
+<div class="chip">
+  <img src="https://image.shutterstock.com/image-illustration/modern-white-washing-machine-object-600w-792327706.jpg" alt="Person" width="96" height="96">
+  <font color="white">  Automated Washing Machine </font>
+</div>
+</div>
+
+<div class="ab">
+
+<div class="chip">
+  <img src="https://thumbs.dreamstime.com/z/cold-refrigerator-full-fresh-food-groceries-14745679.jpg" alt="Person" width="96" height="96">
+   <font color="white"> Refrigerator  </font>
+</div>
++
+<div class="chip">
+  <img src="https://media.istockphoto.com/photos/household-filtration-system-water-treatment-concept-use-of-water-at-picture-id1284076303" alt="Person" width="96" height="96">
+  <font color="white">   RO Water filter  </font>
+</div>
++
+<div class="chip">
+  <img src="https://image.shutterstock.com/image-photo/ratia-haryana-india-3-october-600w-1731174052.jpg" alt="Person" width="96" height="96">
+  <font color="white">     Almirah  </font>
+</div>
++
+<div class="chip">
+  <img src="https://image.shutterstock.com/image-photo/ratia-haryana-india-3-october-600w-1731174052.jpg" alt="Person" width="96" height="96">
+  <font color="white">     Bed and pillow  </font>
+</div>
+</div>
+
+<div class="cd">
+
+<div class="chip">
+  <img src="https://thumbs.dreamstime.com/z/cold-refrigerator-full-fresh-food-groceries-14745679.jpg" alt="Person" width="96" height="96">
+   <font color="white"> House keeping </font>
+</div>
++
+<div class="chip">
+  <img src="https://media.istockphoto.com/photos/household-filtration-system-water-treatment-concept-use-of-water-at-picture-id1284076303" alt="Person" width="96" height="96">
+  <font color="white">   CCTV  </font>
+</div>
++
+<div class="chip">
+  <img src="https://image.shutterstock.com/image-photo/ratia-haryana-india-3-october-600w-1731174052.jpg" alt="Person" width="96" height="96">
+  <font color="white">     Geyser or iron rod  </font>
+</div>
+</div>
+
+
+<!-- MAIN (Center website) -->
+<div class="main">
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('exterrior')"> EXTERRIOR</button>
+  <button class="btn" onclick="filterSelection('interior')"> INTERIOR</button>
+  <button class="btn" onclick="filterSelection('bathroom')"> BATHROOM </button>
+  <button class="btn" onclick="filterSelection('livingroom')"> LIVING ROOM</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+
+<div class="column exterrior">
+       <div class="content">
+	<img src="https://sandreehome.com/wp-content/uploads/2021/11/exterior-pic-11-300x247.jpg" alt="exterrior1" style="width:100%">
+    </div>
+  </div>
+<div class="column exterrior">
+       <div class="content">
+	<img src="https://sandreehome.com/wp-content/uploads/2021/11/exterior-pic-10-300x247.jpg" alt="exterrior2" style="width:100%">
+    </div>
+  </div>
+<div class="column exterrior">
+       <div class="content">
+	<img src="https://sandreehome.com/wp-content/uploads/2021/11/exterior-pic-9-300x247.jpg" alt="exterrior3" style="width:100%">
+    </div>
+  </div>
+<div class="column exterrior">
+       <div class="content">
+	<img src="https://sandreehome.com/wp-content/uploads/2021/11/exterior-pic-8-300x247.jpg" alt="exterrior4" style="width:100%">
+    </div>
+  </div>
+<div class="column exterrior">
+       <div class="content">
+	<img src="https://sandreehome.com/wp-content/uploads/2021/11/exterior-pic-7-300x247.jpg" alt="exterrior5" style="width:100%">
+    </div>
+  </div>
+<div class="column exterrior">
+       <div class="content">
+	<img src="https://sandreehome.com/wp-content/uploads/2021/11/exterior-pic-6-300x247.jpg" alt="exterrior6" style="width:100%">
+    </div>
+  </div>
+
+  <div class="column interior">
+    <div class="content">
+      <img src="https://sandreehome.com/wp-content/uploads/2021/11/interior-pic-4-300x247.jpg" alt="Mountains" style="width:100%">
+   
+    </div>
+  </div>
+  <div class="column interior">
+    <div class="content">
+    <img src="https://sandreehome.com/wp-content/uploads/2021/11/interior-pic-3-300x247.jpg" alt="Lights" style="width:100%">
+    </div>
+  </div>
+  <div class="column interior">
+    <div class="content">
+    <img src="https://sandreehome.com/wp-content/uploads/2021/11/interior-pic-2-300x247.jpg" alt="Nature" style="width:100%">
+    </div>
+  </div>
+  
+  <div class="column bathroom">
+    <div class="content">
+      <img src="https://sandreehome.com/wp-content/uploads/2021/11/bathroom-pic-2-300x247.jpg" alt="Car" style="width:100%">
+    </div>
+  </div>
+  <div class="column bathroom">
+    <div class="content">
+    <img src="https://sandreehome.com/wp-content/uploads/2021/11/bathroom-pic-3-300x247.jpg" alt="Car" style="width:100%">
+    </div>
+  </div>
+  <div class="column bathroom">
+    <div class="content">
+    <img src="https://sandreehome.com/wp-content/uploads/2021/11/bathroom-pic-1-300x247.jpg" alt="Car" style="width:100%">
+    </div>
+  </div>
+
+  <div class="column livingroom">
+    <div class="content">
+      <img src="https://sandreehome.com/wp-content/uploads/2021/11/living-room-and-other-pic-2-300x247.jpg" alt="Cr" style="width:100%">
+    </div>
+  </div>
+  <div class="column livingroom">
+    <div class="content">
+    <img src="https://sandreehome.com/wp-content/uploads/2021/11/living-room-and-other-pic-1-300x247.jpg" alt="Car" style="width:100%">
+    </div>
+  </div>
+  <div class="column livingroom">
+    <div class="content">
+    <img src="https://sandreehome.com/wp-content/uploads/2021/11/living-room-and-other-pic-4-300x247.jpg" alt="Car" style="width:100%">
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("exterrior")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+<div class="hrf">
+<hr>
+</div>
+
+<div class="noc">
+<font face="arial" size="8">  CONTACT INFO:  </font>
+</div>
+<br>
+<div class="con">
+<font size="5"> <u> address </u> : ca 239, street no- 250, Action Area I, Newtown, <br> Kolkata, West Bengal 700156 </font>
+<br>
+<font size="5"> <u> contact no</u> : 07001644887 / 08296314911 </font> 
+<br>
+<font size="5"> <u> email id </u> : mangaldeeppaul100@gmail.com </font> 
+
+</div>
+
+
+
+<center> <iframe width="500" height="300" frameborder="0" 
+ scrolling="no" marginheight="0" marginwidth="0" 
+ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.0299619915336!2d88.46268101479217!3d22.57798268517999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02753b5eba96d3%3A0x74fa7bcecfbb3970!2sSkailine!5e0!3m2!1sen!2sin!4v1636627510917!5m2!1sen!2sin" ></iframe> <p>
+</center>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
